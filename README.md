@@ -4,27 +4,19 @@
 
 I'm a Software Engineering student with a passion for creating innovative solutions that solve real-world problems. 
 
-## Languages and Frameworks
+**Languages:**
 
-| Languages | Frameworks |
-| --- | --- |
-| HTML/CSS/JS | React |
-| Python | .NET |
-| C# | Blazor |
-| Java | Pytest |
-| SQL | Pyperf |
-| Go | XNA |
-| C | Monogame |
-| Kotlin | Unity |
-| MATLAB | JUnit |
-| Assembly | &nbsp; |
-| R | &nbsp; |
+| HTML/CSS/JS | Python | C# | Java | SQL | Go | C | Kotlin | MATLAB | Assembly | R |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
+**Frameworks:**
 
+| React | .NET | Blazor | Pytest | Pyperf | XNA | Monogame | Unity | JUnit | &nbsp; | &nbsp; |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 ## Other Links
 
-- [LinkedIn](https://www.linkedin.com/in/your_username/)](https://www.linkedin.com/in/daniel-akselrod/)
+- [LinkedIn](https://www.linkedin.com/in/daniel-akselrod/)]
 
 ## Projects
 
