@@ -14,8 +14,6 @@ I'm a Software Engineering student with a passion for creating innovative soluti
 | React | .NET | Blazor | Pytest | Pyperf | XNA | Monogame | Unity | JUnit
 | --- | --- | --- | --- | --- | --- | --- | --- |--- |
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=<d-akselrod>&layout=compact)](https://github.com/<d-akselrod>)
-
 ## Other Links
 
 - [LinkedIn](https://www.linkedin.com/in/daniel-akselrod/)
