@@ -12,7 +12,7 @@ I'm a Software Engineering student with a passion for creating innovative soluti
 **Frameworks:**
 
 | React | .NET | Blazor | Pytest | Pyperf | XNA | Monogame | Unity | JUnit
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- |--- |
 
 ## Other Links
 
