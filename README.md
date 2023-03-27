@@ -1,16 +1,44 @@
-### Hi there 👋
+# Hi there, I'm Daniel Akselrod!
 
-<!--
-**d-akselrod/d-akselrod** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## About Me
 
-Here are some ideas to get you started:
+I'm a Software Engineering student with a passion for creating innovative solutions that solve real-world problems. 
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Languages
+
+- HTML/CSS/JS
+- Python
+- C#
+- Java
+- SQL
+- Go
+- C
+- Kotlin
+- MATLAB
+- Kotlin
+- Assembly
+- R
+
+## Frameworks
+
+- React
+- .NET
+- Blazor
+- Pytest
+- Pyperf
+- XNA
+- Monogame
+- Unity
+- JUnit
+
+## Other Links
+
+- [LinkedIn](https://www.linkedin.com/in/your_username/)](https://www.linkedin.com/in/daniel-akselrod/)
+
+## Projects
+
+- [Project 1](https://github.com/johndoe/project1)
+- [Project 2](https://github.com/johndoe/project2)
+- [Project 3](https://github.com/johndoe/project3)
+
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
