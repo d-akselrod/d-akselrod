@@ -6,18 +6,40 @@ I'm a Software Engineering student with a passion for creating innovative soluti
 
 ## Languages and Frameworks
 
-| Languages | Frameworks |
-| --- | --- |
-| HTML/CSS/JS | React |
-| Python | .NET |
-| C# | Blazor |
-| Java | Pytest |
-| SQL | Pyperf |
-| Go | XNA |
-| C | Monogame |
-| Kotlin | Unity |
-| MATLAB | JUnit |
-| Assembly | |
+<div style="display: flex; flex-wrap: wrap;">
+  <div style="flex: 50%; padding: 5px;">
+    <ul>
+      <li>HTML/CSS/JS</li>
+      <li>Python</li>
+      <li>C#</li>
+      <li>Java</li>
+      <li>SQL</li>
+      <li>Go</li>
+      <li>C</li>
+      <li>Kotlin</li>
+      <li>MATLAB</li>
+      <li>Kotlin</li>
+      <li>Assembly</li>
+      <li>R</li>
+    </ul>
+  </div>
+  <div style="flex: 50%; padding: 5px;">
+    <ul>
+      <li>React</li>
+      <li>.NET</li>
+      <li>Blazor</li>
+      <li>Pytest</li>
+      <li>Pyperf</li>
+      <li>XNA</li>
+      <li>Monogame</li>
+      <li>Unity</li>
+      <li>JUnit</li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</div>
 
 ## Other Links
 
