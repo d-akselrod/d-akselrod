@@ -16,7 +16,7 @@ I'm a Software Engineering student with a passion for creating innovative soluti
 
 ## Other Links
 
-- [LinkedIn](https://www.linkedin.com/in/daniel-akselrod/)]
+- [LinkedIn](https://www.linkedin.com/in/daniel-akselrod/)
 
 ## Projects
 
