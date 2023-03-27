@@ -4,32 +4,20 @@
 
 I'm a Software Engineering student with a passion for creating innovative solutions that solve real-world problems. 
 
-## Languages
+## Languages and Frameworks
 
-- HTML/CSS/JS
-- Python
-- C#
-- Java
-- SQL
-- Go
-- C
-- Kotlin
-- MATLAB
-- Kotlin
-- Assembly
-- R
-
-## Frameworks
-
-- React
-- .NET
-- Blazor
-- Pytest
-- Pyperf
-- XNA
-- Monogame
-- Unity
-- JUnit
+| Languages | Frameworks |
+| --- | --- |
+| HTML/CSS/JS | React |
+| Python | .NET |
+| C# | Blazor |
+| Java | Pytest |
+| SQL | Pyperf |
+| Go | XNA |
+| C | Monogame |
+| Kotlin | Unity |
+| MATLAB | JUnit |
+| Assembly | |
 
 ## Other Links
 
