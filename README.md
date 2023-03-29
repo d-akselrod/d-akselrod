@@ -8,6 +8,7 @@ I'm a Software Engineering student with a passion for creating innovative soluti
 <img src="https://github-readme-stats.vercel.app/api?username=d-akselrod&show_icons=true" />
 </picture>
 
+
 **Languages:**
 | HTML/CSS/JS | Python | C# | Java | SQL | Go | C | Kotlin | MATLAB | Assembly | R |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
