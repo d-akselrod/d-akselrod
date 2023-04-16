@@ -19,7 +19,6 @@ I'm a Software Engineering student with a passion for creating innovative soluti
  </p>
  
  ##### Frameworks
- 
  <p>
   <img alt="Rails" src="https://img.shields.io/badge/rails%20-%23CC0000.svg?&style=for-the-badge&logo=ruby-on-rails&logoColor=white" height="25"/>
   <img alt="Vue.js" src="https://img.shields.io/badge/vuejs%20-%2335495e.svg?&style=for-the-badge&logo=vue.js&logoColor=%234FC08D" height="25"/>
@@ -30,5 +29,4 @@ I'm a Software Engineering student with a passion for creating innovative soluti
  </p>
 
 ### Stats
-
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=d-akselrod&theme=radical&layout=compact&hide_border=true&langs_count=10&hide=html,css)
