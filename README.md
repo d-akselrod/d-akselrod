@@ -15,7 +15,7 @@ I'm a Software Engineering student with a passion for creating innovative soluti
  </p>
  <p>
   <img alt="Python" src="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white" height="25"/>
-  <img alt="Java" src="https://img.shields.io/badge/java-%23007396.svg?&style=for-the-badge&logo=java&logoColor=white" height="25"/>
+  <img alt="Java" src="https://img.shields.io/badge/java-007396.svg?&style=for-the-badge&logo=java&logoColor=white" height="25"/>
  </p>
  
  ##### Frameworks
