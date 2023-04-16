@@ -15,7 +15,12 @@ I'm a Software Engineering student with a passion for creating innovative soluti
  </p>
  <p>
   <img alt="Python" src="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white" height="25"/>
-<img alt="Java" src="https://img.shields.io/badge/java-007396.svg?&style=for-the-badge&logo=java&logoColor=white" height="25"/>
+  <img alt="Java" src="https://img.shields.io/badge/java-007396.svg?&style=for-the-badge&logo=java&logoColor=white" height="25"/>
+  <img alt="C#" src="https://img.shields.io/badge/c%23-239120.svg?&style=for-the-badge&logo=c-sharp&logoColor=white" height="25"/>
+  <img alt="C" src="https://img.shields.io/badge/c-A8B9CC.svg?&style=for-the-badge&logo=c&logoColor=white" height="25"/>
+  <img alt="SQL" src="https://img.shields.io/badge/sql-4479A1.svg?&style=for-the-badge&logo=oracle&logoColor=white" height="25"/>
+  <img alt="Go" src="https://img.shields.io/badge/go-00ADD8.svg?&style=for-the-badge&logo=go&logoColor=white" height="25"/>
+  <img alt="MATLAB" src="https://img.shields.io/badge/matlab-0076A8.svg?&style=for-the-badge&logo=mathworks&logoColor=white" height="25"/>
  </p>
  
  ##### Frameworks
