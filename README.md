@@ -35,5 +35,6 @@ I'm a Software Engineering student with a passion for creating innovative soluti
   <img alt="XNA" src="https://img.shields.io/badge/XNA-DC3C00.svg?&style=for-the-badge&logo=gamepad&logoColor=white" height="25"/>
  </p>
 
-### Stats
+<!--### Stats
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=d-akselrod&theme=radical&layout=compact&hide_border=true&langs_count=10&hide=html,css)
+-->
