@@ -39,4 +39,4 @@ I'm a Software Engineering student with a passion for creating innovative soluti
 
 ### Stats
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=d-akselrod&theme=radical&layout=compact&hide_border=true&langs_count=10&hide=html,css)
-
+![](https://github-readme-stats.vercel.app/api?username=d-akselrod&theme=algolia&show_icons=true)
