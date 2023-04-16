@@ -38,5 +38,5 @@ I'm a Software Engineering student with a passion for creating innovative soluti
  </p>
 
 ### Stats
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=d-akselrod&theme=transparent&layout=compact&hide_border=true&langs_count=10&hide=html,css)
+![Daniel's Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=d-akselrod&theme=transparent&layout=compact&hide_border=true&langs_count=10&hide=html,css)
 ![Daniel's GitHub stats](https://github-readme-stats.vercel.app/api?username=d-akselrod&show_icons=true&theme=transparent&hide_border=true)
