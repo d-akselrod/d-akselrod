@@ -32,7 +32,7 @@ I'm a Software Engineering student with a passion for creating innovative soluti
   <img alt=".NET" src="https://img.shields.io/badge/.NET-512BD4.svg?&style=for-the-badge&logo=.net&logoColor=white" height="25"/> 
   <img alt="Blazor" src="https://img.shields.io/badge/blazor-512BD4.svg?&style=for-the-badge&logo=blazor&logoColor=white" height="25"/> 
   <img alt="Pytest" src="https://img.shields.io/badge/pytest-0A9EDC.svg?&style=for-the-badge&logo=pytest&logoColor=white" height="25"/> 
-  <img alt="XNA" src="https://img.shields.io/badge/XNA-DC3C00.svg?&style=for-the-badge&logo=pytest&logoColor=white height="25"/>
+  <img alt="XNA" src="https://img.shields.io/badge/XNA-DC3C00.svg?&style=for-the-badge&logo=gamepad&logoColor=white" height="25"/>
  </p>
 
 ### Stats
