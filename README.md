@@ -1,5 +1,7 @@
 # Hi there, I'm Daniel Akselrod!
 
+[![LinkedIn Profile](https://img.shields.io/badge/LinkedIn-Daniel%20Akselrod-blue?style=flat-square&logo=linkedin)](https://ca.linkedin.com/in/daniel-akselrod)
+
 ## About Me
 
 I'm a Software Engineering student with a passion for creating innovative solutions that solve real-world problems. 
