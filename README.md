@@ -9,12 +9,12 @@ I'm a Software Engineering student with a passion for creating innovative soluti
 ### Skills
 ##### Languages
  <p>
-  <img alt="C#" src="https://img.shields.io/badge/c%23-239120.svg?&style=for-the-badge&logo=c-sharp&logoColor=white" height="25"/>
-  <img alt="C++" src="https://img.shields.io/badge/c++-00599C.svg?&style=for-the-badge&logo=c%2B%2B&logoColor=white" height="25"/>
-  <img alt="Python" src="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white" height="25"/>
-  <img alt="Java" src="https://img.shields.io/badge/java-007396.svg?&style=for-the-badge&logo=java&logoColor=white" height="25"/>
   <img alt="C" src="https://img.shields.io/badge/c-A8B9CC.svg?&style=for-the-badge&logo=c&logoColor=white" height="25"/>
+  <img alt="C++" src="https://img.shields.io/badge/c++-00599C.svg?&style=for-the-badge&logo=c%2B%2B&logoColor=white" height="25"/>
+  <img alt="C#" src="https://img.shields.io/badge/c%23-239120.svg?&style=for-the-badge&logo=c-sharp&logoColor=white" height="25"/>
+  <img alt="Python" src="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white" height="25"/>
   <img alt="Go" src="https://img.shields.io/badge/go-00ADD8.svg?&style=for-the-badge&logo=go&logoColor=white" height="25"/>
+  <img alt="Java" src="https://img.shields.io/badge/java-007396.svg?&style=for-the-badge&logo=java&logoColor=white" height="25"/>
   <img alt="Kotlin" src="https://img.shields.io/badge/kotlin-0095D5.svg?&style=for-the-badge&logo=kotlin&logoColor=white" height="25"/>
  </p>
 <p>
