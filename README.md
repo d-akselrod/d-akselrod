@@ -4,7 +4,7 @@
 
 ## About Me
 
-I'm a Software Engineering student with a passion for creating innovative solutions that solve real-world problems. 
+I'm a Software Engineer with a passion for creating innovative solutions that solve real-world problems. 
 
 ### Skills
 ##### Languages
