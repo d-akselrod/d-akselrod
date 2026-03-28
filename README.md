@@ -1,49 +1,71 @@
-# Hi there, I'm Daniel Akselrod!
+<div align="center">
 
-[![LinkedIn Profile](https://img.shields.io/badge/LinkedIn-Daniel%20Akselrod-blue?style=flat-square&logo=linkedin)](https://ca.linkedin.com/in/daniel-akselrod)
+# Daniel Akselrod
 
-## About Me
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=70A5FD&center=true&vCenter=true&multiline=true&repeat=true&width=500&height=45&lines=Software+Engineer;Building+Innovative+Solutions)](https://git.io/typing-svg)
 
-I'm a Software Engineer with a passion for creating innovative solutions that solve real-world problems. 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Daniel%20Akselrod-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://ca.linkedin.com/in/daniel-akselrod)
 
-### Skills
-##### Languages
- <p>
-  <img alt="C" src="https://img.shields.io/badge/c-A8B9CC.svg?&style=for-the-badge&logo=c&logoColor=white" height="25"/>
-  <img alt="C++" src="https://img.shields.io/badge/c++-00599C.svg?&style=for-the-badge&logo=c%2B%2B&logoColor=white" height="25"/>
-  <img alt="C#" src="https://img.shields.io/badge/c%23-239120.svg?&style=for-the-badge&logo=c-sharp&logoColor=white" height="25"/>
-  <img alt="Python" src="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white" height="25"/>
-  <img alt="Go" src="https://img.shields.io/badge/go-00ADD8.svg?&style=for-the-badge&logo=go&logoColor=white" height="25"/>
-  <img alt="Java" src="https://img.shields.io/badge/java-007396.svg?&style=for-the-badge&logo=java&logoColor=white" height="25"/>
-  <img alt="Kotlin" src="https://img.shields.io/badge/kotlin-0095D5.svg?&style=for-the-badge&logo=kotlin&logoColor=white" height="25"/>
- </p>
+</div>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="" width="100%">
+
+### About Me
+
+Software Engineer with a passion for creating innovative solutions that solve real-world problems.
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="" width="100%">
+
+### Languages
+
 <p>
-  <img alt="HTML5" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" height="25"/>
-  <img alt="CSS" src="https://img.shields.io/badge/css3-1572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" height="25"/>
-  <img alt="JavaScript" src="https://img.shields.io/badge/javascript-F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=white" height="25"/>
-  <img alt="TypeScript" src="https://img.shields.io/badge/typescript%20-%23007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white" height="25"/>
-  <img src="https://img.shields.io/badge/latex-008080.svg?&style=for-the-badge&logo=latex&logoColor=white" height="25"/>
-  <img alt="SQL" src="https://img.shields.io/badge/sql-4479A1.svg?&style=for-the-badge&logo=oracle&logoColor=white" height="25"/>
-  <img alt="MATLAB" src="https://img.shields.io/badge/matlab-0076A8.svg?&style=for-the-badge&logo=mathworks&logoColor=white" height="25"/>
- </p>
+  <img alt="C" src="https://img.shields.io/badge/C-0d1117?style=for-the-badge&logo=c&logoColor=A8B9CC" height="28"/>
+  <img alt="C++" src="https://img.shields.io/badge/C++-0d1117?style=for-the-badge&logo=c%2B%2B&logoColor=00599C" height="28"/>
+  <img alt="C#" src="https://img.shields.io/badge/C%23-0d1117?style=for-the-badge&logo=c-sharp&logoColor=239120" height="28"/>
+  <img alt="Python" src="https://img.shields.io/badge/Python-0d1117?style=for-the-badge&logo=python&logoColor=3776AB" height="28"/>
+  <img alt="Go" src="https://img.shields.io/badge/Go-0d1117?style=for-the-badge&logo=go&logoColor=00ADD8" height="28"/>
+  <img alt="Java" src="https://img.shields.io/badge/Java-0d1117?style=for-the-badge&logo=openjdk&logoColor=ED8B00" height="28"/>
+  <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-0d1117?style=for-the-badge&logo=kotlin&logoColor=7F52FF" height="28"/>
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-0d1117?style=for-the-badge&logo=javascript&logoColor=F7DF1E" height="28"/>
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-0d1117?style=for-the-badge&logo=typescript&logoColor=3178C6" height="28"/>
+  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-0d1117?style=for-the-badge&logo=html5&logoColor=E34F26" height="28"/>
+  <img alt="CSS3" src="https://img.shields.io/badge/CSS3-0d1117?style=for-the-badge&logo=css3&logoColor=1572B6" height="28"/>
+  <img alt="SQL" src="https://img.shields.io/badge/SQL-0d1117?style=for-the-badge&logo=postgresql&logoColor=4169E1" height="28"/>
+  <img alt="LaTeX" src="https://img.shields.io/badge/LaTeX-0d1117?style=for-the-badge&logo=latex&logoColor=008080" height="28"/>
+  <img alt="MATLAB" src="https://img.shields.io/badge/MATLAB-0d1117?style=for-the-badge&logo=mathworks&logoColor=0076A8" height="28"/>
+</p>
 
- 
- ##### Technologies
- <p>
-  <img alt="Git" src="https://img.shields.io/badge/git-F05032.svg?&style=for-the-badge&logo=git&logoColor=white" height="25"/> 
-  <img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB" height="25"/>
-  <img alt="React Native" src="https://img.shields.io/badge/react_native%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB" height="25"/>
-  <img alt="Express" src="https://img.shields.io/badge/express-000000.svg?&style=for-the-badge&logo=express&logoColor=white" height="25"/> 
-  <img alt="ASP.NET" src="https://img.shields.io/badge/ASP.NET-512BD4.svg?&style=for-the-badge&logo=.net&logoColor=white" height="25"/>
-  <img alt="XNA" src="https://img.shields.io/badge/XNA-DC3C00.svg?&style=for-the-badge&logo=gamepad&logoColor=white" height="25"/>
- </p>
- <p>
-  <img alt="Pytest" src="https://img.shields.io/badge/pytest-0A9EDC.svg?&style=for-the-badge&logo=pytest&logoColor=white" height="25"/> 
-  <img alt="XUnit" src="https://img.shields.io/badge/xunit-512BD4.svg?&style=for-the-badge&logo=xunit&logoColor=white" height="25"/>
-  <img alt="Jest" src="https://img.shields.io/badge/jest-C21325.svg?&style=for-the-badge&logo=jest&logoColor=white" height="25"/> 
-  <img alt="JUnit" src="https://img.shields.io/badge/JUnit-25A162.svg?&style=for-the-badge&logo=junit5&logoColor=white" height="25"/> 
- </p>
+### Technologies
+
+<p>
+  <img alt="Git" src="https://img.shields.io/badge/Git-0d1117?style=for-the-badge&logo=git&logoColor=F05032" height="28"/>
+  <img alt="React" src="https://img.shields.io/badge/React-0d1117?style=for-the-badge&logo=react&logoColor=61DAFB" height="28"/>
+  <img alt="React Native" src="https://img.shields.io/badge/React_Native-0d1117?style=for-the-badge&logo=react&logoColor=61DAFB" height="28"/>
+  <img alt="Express" src="https://img.shields.io/badge/Express-0d1117?style=for-the-badge&logo=express&logoColor=FFFFFF" height="28"/>
+  <img alt="ASP.NET" src="https://img.shields.io/badge/ASP.NET-0d1117?style=for-the-badge&logo=dotnet&logoColor=512BD4" height="28"/>
+  <img alt="XNA" src="https://img.shields.io/badge/XNA-0d1117?style=for-the-badge&logo=xbox&logoColor=107C10" height="28"/>
+  <img alt="Pytest" src="https://img.shields.io/badge/Pytest-0d1117?style=for-the-badge&logo=pytest&logoColor=0A9EDC" height="28"/>
+  <img alt="xUnit" src="https://img.shields.io/badge/xUnit-0d1117?style=for-the-badge&logo=dotnet&logoColor=512BD4" height="28"/>
+  <img alt="Jest" src="https://img.shields.io/badge/Jest-0d1117?style=for-the-badge&logo=jest&logoColor=C21325" height="28"/>
+  <img alt="JUnit" src="https://img.shields.io/badge/JUnit-0d1117?style=for-the-badge&logo=junit5&logoColor=25A162" height="28"/>
+</p>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="" width="100%">
 
 ### Stats
-![Daniel's Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=d-akselrod&theme=transparent&layout=compact&hide_border=true&langs_count=10&hide=html,css)
-![Daniel's GitHub stats](https://github-readme-stats.vercel.app/api?username=d-akselrod&show_icons=true&theme=transparent&hide_border=true)
+
+<div align="center">
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<img src="https://github-readme-stats-sigma-five.vercel.app/api?username=d-akselrod&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=70A5FD&icon_color=70A5FD&text_color=C9D1D9" alt="GitHub Stats" />
+</td>
+<td>
+<img src="https://streak-stats.demolab.com/?user=d-akselrod&theme=tokyonight&hide_border=true&background=0D1117&ring=70A5FD&fire=70A5FD&currStreakLabel=70A5FD" alt="GitHub Streak" />
+</td>
+</tr>
+</table>
+
+<img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=d-akselrod&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=70A5FD&text_color=C9D1D9&layout=compact&langs_count=10&hide=html,css" alt="Top Languages" width="550"/>
+
+</div>
