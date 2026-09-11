@@ -176,8 +176,10 @@ def activity(t, weeks, total, scope):
     gap = 4
     grid_x, grid_y = pad + 26, 110
     weeks = weeks[-53:]
-    # Size the cells to the data so the grid always fills the card width.
-    step = (w - pad - grid_x) / max(len(weeks), 53)
+    # Size cells so the LAST cell's right edge meets the card's content edge.
+    # Each column is cell+gap wide, so the final column's trailing gap has to
+    # be added back before dividing, or the lattice lands a gap short.
+    step = (w - pad - grid_x + gap) / max(len(weeks), 53)
     cell = step - gap
     h = grid_y + round(7 * step) + 54
 
@@ -212,8 +214,8 @@ def activity(t, weeks, total, scope):
              f'<rect width="{cell:.2f}" height="{cell:.2f}" rx="3" '
              f'fill="{t["track"]}"/></pattern>')
     p.append(f'<rect x="{grid_x:.2f}" y="{grid_y}" '
-             f'width="{len(weeks) * step:.2f}" height="{7 * step:.2f}" '
-             f'fill="url(#cellBg)"/>')
+             f'width="{(len(weeks) - 1) * step + cell:.2f}" '
+             f'height="{6 * step + cell:.2f}" fill="url(#cellBg)"/>')
     for i, wk in enumerate(weeks):
         for j, (_, count) in enumerate(wk):
             if count <= 0:
@@ -226,9 +228,12 @@ def activity(t, weeks, total, scope):
                      f'height="{cell:.1f}" rx="3" fill="{fill}" '
                      f'opacity="{0.35 + 0.65 * k:.2f}"/>')
 
-    lx, ly = w - pad - 5 * step - 74, h - 30
-    p.append(text_el(lx - 8, ly + cell * 0.72, "Less", 10, t["faint"], FONT_MONO, "400",
-                     anchor="end"))
+    ly = h - 30
+    baseline = ly + cell * 0.72
+    more_w = mono_width("More", 10)
+    p.append(text_el(w - pad, baseline, "More", 10, t["faint"], FONT_MONO,
+                     "400", anchor="end"))
+    lx = (w - pad - more_w - 8) - 4 * step - cell
     for i in range(5):
         k = i / 4
         fill = t["track"] if i == 0 else (
@@ -237,8 +242,8 @@ def activity(t, weeks, total, scope):
         p.append(f'<rect x="{lx + i * step:.2f}" y="{ly}" '
                  f'width="{cell:.2f}" height="{cell:.2f}" rx="3" fill="{fill}" '
                  f'opacity="{1.0 if i == 0 else 0.35 + 0.65 * k:.2f}"/>')
-    p.append(text_el(lx + 5 * step + 4, ly + cell * 0.72, "More", 10, t["faint"],
-                     FONT_MONO, "400"))
+    p.append(text_el(lx - 8, baseline, "Less", 10, t["faint"], FONT_MONO,
+                     "400", anchor="end"))
     p.append("</svg>")
     return "".join(p)
 
