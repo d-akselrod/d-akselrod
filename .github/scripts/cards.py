@@ -18,8 +18,8 @@ def _defs(t):
     a1, a2, a3 = t["a1"], t["a3"], t["a2"]
     return f"""<defs>
 <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-<stop offset="0" stop-color="{a1}"><animate attributeName="stop-color" values="{a1};{a3};{a2};{a1}" dur="9s" repeatCount="indefinite"/></stop>
-<stop offset="1" stop-color="{a2}"><animate attributeName="stop-color" values="{a2};{a1};{a3};{a2}" dur="9s" repeatCount="indefinite"/></stop>
+<stop offset="0" stop-color="{a1}"/><stop offset="0.55" stop-color="{a2}"/>
+<stop offset="1" stop-color="{a3}"/>
 </linearGradient>
 <linearGradient id="ruleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
 <stop offset="0" stop-color="{a1}"/><stop offset="0.45" stop-color="{a3}"/>
@@ -50,14 +50,8 @@ def _graph(t):
             f'stroke="{t["a3"]}" stroke-width="1" opacity="0.28"/>')
     for n, (x, y) in enumerate(NODES):
         colour = [t["a1"], t["a2"], t["a3"]][n % 3]
-        delay = n * 0.45
-        out.append(
-            f'<circle cx="{x}" cy="{y}" r="3.4" fill="{colour}" opacity="0.85">'
-            f'<animate attributeName="r" values="3.4;5.2;3.4" dur="3.6s" '
-            f'begin="{delay:.2f}s" repeatCount="indefinite"/>'
-            f'<animate attributeName="opacity" values="0.85;0.35;0.85" '
-            f'dur="3.6s" begin="{delay:.2f}s" repeatCount="indefinite"/>'
-            f'</circle>')
+        out.append(f'<circle cx="{x}" cy="{y}" r="3.6" fill="{colour}" '
+                   f'opacity="{0.9 - (n % 3) * 0.12:.2f}"/>')
     for n, (i, j) in enumerate(PULSE_EDGES):
         x1, y1 = NODES[i]
         x2, y2 = NODES[j]
@@ -78,14 +72,8 @@ def hero(t, name, role, meta):
     p.append('<g clip-path="url(#heroClip)">')
     p.append(f'<rect width="{w}" height="{h}" fill="{t["bg"]}"/>')
     p.append(f'<rect width="{w}" height="{h}" fill="url(#dots)" opacity="0.55"/>')
-    p.append('<ellipse cx="130" cy="40" rx="320" ry="210" fill="url(#orbA)">'
-             '<animateTransform attributeName="transform" type="translate" '
-             'values="0,0; 60,26; 0,0" dur="16s" repeatCount="indefinite"/>'
-             '</ellipse>')
-    p.append('<ellipse cx="880" cy="250" rx="300" ry="200" fill="url(#orbB)">'
-             '<animateTransform attributeName="transform" type="translate" '
-             'values="0,0; -50,-30; 0,0" dur="20s" repeatCount="indefinite"/>'
-             '</ellipse>')
+    p.append('<ellipse cx="150" cy="52" rx="320" ry="210" fill="url(#orbA)"/>')
+    p.append('<ellipse cx="860" cy="238" rx="300" ry="200" fill="url(#orbB)"/>')
     p.append(_graph(t))
 
     p.append(text_el(56, 72, "$ whoami", 14, t["a1"], FONT_MONO, "500"))
@@ -208,19 +196,24 @@ def activity(t, weeks, total, scope):
         p.append(text_el(pad, grid_y + row * step + cell * 0.72, day, 9.5, t["faint"],
                          FONT_MONO, "400"))
 
+    p.append(f'<pattern id="cellBg" width="{step:.2f}" height="{step:.2f}" '
+             f'patternUnits="userSpaceOnUse">'
+             f'<rect width="{cell:.2f}" height="{cell:.2f}" rx="3" '
+             f'fill="{t["track"]}"/></pattern>')
+    p.append(f'<rect x="{grid_x:.2f}" y="{grid_y}" '
+             f'width="{len(weeks) * step:.2f}" height="{7 * step:.2f}" '
+             f'fill="url(#cellBg)"/>')
     for i, wk in enumerate(weeks):
         for j, (_, count) in enumerate(wk):
             if count <= 0:
-                fill, op = t["track"], 1.0
-            else:
-                k = math.sqrt(min(count / peak, 1.0)) if peak else 0
-                fill = _mix(t["a3"], t["a1"], k) if k < 0.5 else \
-                    _mix(t["a1"], t["a2"], (k - 0.5) * 2)
-                op = 0.35 + 0.65 * k
-            p.append(f'<rect x="{grid_x + i * step:.2f}" '
-                     f'y="{grid_y + j * step:.2f}" width="{cell:.2f}" '
-                     f'height="{cell:.2f}" rx="3" fill="{fill}" '
-                     f'opacity="{op:.2f}"/>')
+                continue
+            k = math.sqrt(min(count / peak, 1.0)) if peak else 0
+            fill = _mix(t["a3"], t["a1"], k) if k < 0.5 else \
+                _mix(t["a1"], t["a2"], (k - 0.5) * 2)
+            p.append(f'<rect x="{grid_x + i * step:.1f}" '
+                     f'y="{grid_y + j * step:.1f}" width="{cell:.1f}" '
+                     f'height="{cell:.1f}" rx="3" fill="{fill}" '
+                     f'opacity="{0.35 + 0.65 * k:.2f}"/>')
 
     lx, ly = w - pad - 5 * step - 74, h - 30
     p.append(text_el(lx - 8, ly + cell * 0.72, "Less", 10, t["faint"], FONT_MONO, "400",
@@ -270,10 +263,7 @@ def credentials(t, education, certs, accent="#FF9900"):
         cx, cy = split + 39, y - 4
         p.append(f'<circle cx="{cx}" cy="{cy}" r="9" fill="{accent}" '
                  f'opacity="0.16"/>')
-        p.append(f'<circle cx="{cx}" cy="{cy}" r="4" fill="{accent}">'
-                 f'<animate attributeName="opacity" values="1;0.45;1" '
-                 f'dur="3.4s" begin="{i * 1.1:.1f}s" repeatCount="indefinite"/>'
-                 f'</circle>')
+        p.append(f'<circle cx="{cx}" cy="{cy}" r="4" fill="{accent}"/>')
         p.append(text_el(split + 58, y, title, 15.5, t["text"], FONT_SANS,
                          "650"))
         p.append(text_el(split + 58, y + 19, subtitle, 12, t["muted"],
