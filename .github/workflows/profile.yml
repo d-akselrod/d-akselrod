@@ -21,17 +21,19 @@ jobs:
   render:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
       - name: Render profile cards
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Optional. A PAT with the read:user scope makes the contribution
-          # card count private contributions as well as public ones.
+          # Optional fallback. The built-in token already reports private
+          # contributions while "include private contributions on my profile"
+          # is enabled on the account; a PAT with read:user would be needed
+          # only if that setting is ever turned off.
           METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
         run: python3 .github/scripts/render.py
 

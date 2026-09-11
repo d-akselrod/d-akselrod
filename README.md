@@ -3,9 +3,10 @@
   .github/scripts/render.py and refreshed daily by .github/workflows/profile.yml.
   Edit copy here; edit card content in .github/scripts/render.py.
 
-  NOTE: the contribution card counts PUBLIC activity only unless a repository
-  secret named METRICS_TOKEN (a PAT with the read:user scope) is set. With it,
-  private contributions are included.
+  NOTE: the contribution card already includes private contributions, because
+  "include private contributions on my profile" is enabled on the account.
+  If that setting is ever turned off, add a repository secret named
+  METRICS_TOKEN (a PAT with the read:user scope) to restore the full count.
 -->
 
 <div align="center">
