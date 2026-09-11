@@ -22,54 +22,21 @@
 
 </div>
 
-I build production systems where the AI **is** the product — agentic pipelines, retrieval that holds up against real documents, and the unglamorous platform work that keeps both running. Right now that means shipping AI features at Guidewire by day and running a 158K-line platform single-handed by night.
+I build production systems where the AI **is** the product — agentic pipelines, retrieval that holds up against real documents, and the platform work that keeps both running. Full-stack by training, focused on agentic AI at Guidewire, and finishing an M.S. in Computing Systems at Georgia Tech.
 
 ---
-
-### Currently
-
-**Guidewire** — *Software Engineer II* <br>
-AI product work on an AWS / Spring Boot / React stack. Led AI enablement sessions for 100+ engineers across the Toronto office.
-
-**Bristol Cloud** — *Sole engineer* · [cloud.bristolir.com](https://cloud.bristolir.com) <br>
-An internal operating platform spanning 10 business domains — billing, CRM, campaigns, IR screening — that replaced four third-party SaaS tools.
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/impact-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/impact-light.svg">
-  <img alt="Bristol Cloud: 158K lines of TypeScript, 10 business domains, 1,289 tests green, 3× client revenue growth" src="assets/impact-light.svg" width="100%">
-</picture>
-
-- Collapsed a 7-service micro-frontend architecture into a modular monolith — retiring 8 Azure App Services, cross-service HTTP hops, shared internal API keys, and Module Federation — without dropping a test.
-- Ships as git-SHA-tagged container images to Azure App Service for single-command rollback, with Key Vault managed-identity secrets and schema-per-domain Postgres isolation across 77 migrations.
-- Exposes platform tools to an in-app AI assistant over an OAuth-secured **MCP server**.
-
----
-
-### Stack
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg">
-  <img alt="Technical stack" src="assets/stack-light.svg" width="100%">
+  <img alt="Technical skills across languages, agentic AI, machine learning, backend, frontend, cloud and DevOps" src="assets/stack-light.svg" width="100%">
 </picture>
 
----
-
-### Selected public work
-
-Most of what I ship lives in private repositories. A sample of what doesn't:
-
-| Project | What it is |
-| --- | --- |
-| **[rag-engine](https://github.com/d-akselrod/rag-engine)** | Retrieval-augmented generation API on FastAPI, FAISS, and Gemini — semantic search and grounded chat over a local vector store, no external database required. |
-| **[sweat-smart](https://github.com/d-akselrod/sweat-smart)** | Full-stack mobile fitness app. React front end, ASP.NET Core API, Azure-hosted. |
-| **[cab-pool](https://github.com/d-akselrod/cab-pool)** | Full-stack Android ride-sharing app in TypeScript. |
-| **[python3-pseudo-compiler](https://github.com/d-akselrod/python3-pseudo-compiler)** | Translates Python 3 into PEP/9 assembly by walking the AST. |
-
----
-
-### Activity
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/credentials-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/credentials-light.svg">
+  <img alt="M.S. Computer Science at Georgia Tech and B.Eng. Software Engineering at McMaster; AWS Certified Cloud Practitioner and AI Practitioner" src="assets/credentials-light.svg" width="100%">
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
@@ -77,21 +44,7 @@ Most of what I ship lives in private repositories. A sample of what doesn't:
   <img alt="Contribution activity over the last year" src="assets/activity-light.svg" width="100%">
 </picture>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/languages-light.svg">
-  <img alt="Language distribution across public repositories" src="assets/languages-light.svg" width="100%">
-</picture>
-
 ---
-
-### Credentials
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/credentials-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/credentials-light.svg">
-  <img alt="M.S. Computer Science at Georgia Tech and B.Eng. Software Engineering at McMaster; AWS Certified Cloud Practitioner and AI Practitioner" src="assets/credentials-light.svg" width="100%">
-</picture>
 
 <div align="center">
 <br>

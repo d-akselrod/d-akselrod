@@ -169,53 +169,6 @@ def _mix(c1, c2, k):
         round(a[i] + (b[i] - a[i]) * k) for i in range(3))
 
 
-def languages(t, entries):
-    """`entries` is a list of (name, percent, colour) sorted descending."""
-    w, pad = 1000, 30
-    bar_y, bar_h, bar_w = 92, 15, w - pad * 2
-    cols, col_w = 4, (w - pad * 2) / 4
-    rows = max(1, (len(entries) + cols - 1) // cols)
-    h = 140 + rows * 26
-
-    p = [svg_open(w, h, "Language distribution"), card(w, h, t)]
-    p.append(text_el(pad, 46, "LANGUAGE DISTRIBUTION", 12, t["faint"],
-                     FONT_MONO, "600", spacing="1.2"))
-    p.append(text_el(w - pad, 46, "public repositories", 12, t["faint"],
-                     FONT_MONO, "400", anchor="end"))
-
-    if not entries:
-        p.append(text_el(pad, bar_y + 12, "no data", 13, t["muted"]))
-        p.append("</svg>")
-        return "".join(p)
-
-    p.append(f'<clipPath id="barClip"><rect x="{pad}" y="{bar_y}" '
-             f'width="{bar_w}" height="{bar_h}" rx="{bar_h / 2}"/></clipPath>')
-    p.append(f'<rect x="{pad}" y="{bar_y}" width="{bar_w}" height="{bar_h}" '
-             f'rx="{bar_h / 2}" fill="{t["track"]}"/>')
-    p.append('<g clip-path="url(#barClip)">')
-    x = pad
-    for i, (_, pct, colour) in enumerate(entries):
-        seg = bar_w * pct / 100.0
-        p.append(f'<rect x="{x:.2f}" y="{bar_y}" width="{max(seg, 0.6):.2f}" '
-                 f'height="{bar_h}" fill="{colour}">'
-                 f'<animate attributeName="opacity" values="0.72;1;0.72" '
-                 f'dur="5s" begin="{i * 0.35:.2f}s" repeatCount="indefinite"/>'
-                 f'</rect>')
-        x += seg
-    p.append("</g>")
-
-    for i, (name, pct, colour) in enumerate(entries):
-        cx = pad + (i % cols) * col_w
-        cy = 150 + (i // cols) * 26
-        p.append(f'<circle cx="{cx + 5:.1f}" cy="{cy - 4:.1f}" r="5" '
-                 f'fill="{colour}"/>')
-        p.append(text_el(cx + 18, cy, name, 13, t["text"], FONT_SANS, "500"))
-        p.append(text_el(cx + col_w - 22, cy, f"{pct:.1f}%", 12.5, t["muted"],
-                         FONT_MONO, "400", anchor="end"))
-    p.append("</svg>")
-    return "".join(p)
-
-
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
@@ -282,39 +235,6 @@ def activity(t, weeks, total, scope):
                  f'opacity="{1.0 if i == 0 else 0.35 + 0.65 * k:.2f}"/>')
     p.append(text_el(lx + 5 * step + 4, ly + cell * 0.72, "More", 10, t["faint"],
                      FONT_MONO, "400"))
-    p.append("</svg>")
-    return "".join(p)
-
-
-def impact(t, title, subtitle, stats):
-    """Headline metrics for a flagship project. `stats` is (value, l1, l2)."""
-    w, pad = 1000, 30
-    h = 186
-    n = len(stats)
-    col = (w - pad * 2) / n
-
-    p = [svg_open(w, h, f"{title} — key metrics"), card(w, h, t)]
-    p.append(f'<defs><linearGradient id="statGrad" x1="0%" y1="0%" x2="100%" '
-             f'y2="0%"><stop offset="0" stop-color="{t["a1"]}"/>'
-             f'<stop offset="1" stop-color="{t["a2"]}"/></linearGradient></defs>')
-    p.append(text_el(pad, 44, title.upper(), 12, t["faint"], FONT_MONO, "600",
-                     spacing="1.2"))
-    p.append(text_el(w - pad, 44, subtitle, 12, t["faint"], FONT_MONO, "400",
-                     anchor="end"))
-    p.append(f'<rect x="{pad}" y="60" width="{w - pad * 2}" height="1" '
-             f'fill="{t["border"]}"/>')
-
-    for i, (value, line1, line2) in enumerate(stats):
-        cx = pad + col * i + col / 2
-        if i:
-            p.append(f'<rect x="{pad + col * i:.1f}" y="84" width="1" '
-                     f'height="70" fill="{t["border"]}"/>')
-        p.append(text_el(cx, 124, value, 38, "url(#statGrad)", FONT_SANS,
-                         "800", anchor="middle", spacing="-1"))
-        p.append(text_el(cx, 148, line1, 12, t["text"], FONT_SANS, "500",
-                         anchor="middle"))
-        p.append(text_el(cx, 165, line2, 11.5, t["muted"], FONT_MONO, "400",
-                         anchor="middle"))
     p.append("</svg>")
     return "".join(p)
 
