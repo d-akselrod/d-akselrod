@@ -1,7 +1,5 @@
 """SVG builders for each profile card."""
 
-import math
-
 from theme import (FONT_MONO, FONT_SANS, MONO_ADVANCE, card, esc, mono_width,
                    svg_open, text_el)
 
@@ -153,103 +151,6 @@ def stack(t, groups):
     out.append("".join(body))
     out.append("</svg>")
     return "".join(out)
-
-
-def _hex(c):
-    c = c.lstrip("#")
-    return tuple(int(c[i:i + 2], 16) for i in (0, 2, 4))
-
-
-def _mix(c1, c2, k):
-    a, b = _hex(c1), _hex(c2)
-    return "#%02X%02X%02X" % tuple(
-        round(a[i] + (b[i] - a[i]) * k) for i in range(3))
-
-
-MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-          "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-
-
-def activity(t, weeks, total, scope):
-    """`weeks` is a list of week columns, each a list of (date, count)."""
-    w, pad = 1000, 30
-    gap = 4
-    grid_x, grid_y = pad + 26, 110
-    weeks = weeks[-53:]
-    # Size cells so the LAST cell's right edge meets the card's content edge.
-    # Each column is cell+gap wide, so the final column's trailing gap has to
-    # be added back before dividing, or the lattice lands a gap short.
-    step = (w - pad - grid_x + gap) / max(len(weeks), 53)
-    cell = step - gap
-    h = grid_y + round(7 * step) + 54
-
-    peak = max((c for wk in weeks for _, c in wk), default=0)
-    p = [svg_open(w, h, "Contribution activity"), card(w, h, t)]
-    p.append(text_el(pad, 44, "CONTRIBUTION ACTIVITY", 12, t["faint"],
-                     FONT_MONO, "600", spacing="1.2"))
-    p.append(text_el(w - pad, 44, scope, 12, t["faint"], FONT_MONO, "400",
-                     anchor="end"))
-    p.append(f'<rect x="{pad}" y="60" width="{w - pad * 2}" height="1" '
-             f'fill="{t["border"]}"/>')
-    p.append(text_el(pad, 90, f"{total:,}", 21, t["text"], FONT_SANS, "700"))
-    p.append(text_el(pad + mono_width(f"{total:,}", 21) * 0.95 + 8, 90,
-                     "contributions in the last year", 13, t["muted"],
-                     FONT_SANS, "400"))
-
-    seen = set()
-    for i, wk in enumerate(weeks):
-        if not wk:
-            continue
-        month = int(wk[0][0][5:7])
-        if month not in seen and i < len(weeks) - 2:
-            seen.add(month)
-            p.append(text_el(grid_x + i * step, grid_y - 9, MONTHS[month - 1],
-                             10, t["faint"], FONT_MONO, "400"))
-    for row, day in ((1, "Mon"), (3, "Wed"), (5, "Fri")):
-        p.append(text_el(pad, grid_y + row * step + cell * 0.72, day, 9.5, t["faint"],
-                         FONT_MONO, "400"))
-
-    # patternUnits="userSpaceOnUse" tiles from the SVG origin, not from the
-    # rect being filled, so the tile origin has to be pinned to the grid or
-    # the empty cells drift out of step with the drawn ones.
-    p.append(f'<pattern id="cellBg" x="{grid_x:.2f}" y="{grid_y}" '
-             f'width="{step:.2f}" height="{step:.2f}" '
-             f'patternUnits="userSpaceOnUse">'
-             f'<rect width="{cell:.2f}" height="{cell:.2f}" rx="3" '
-             f'fill="{t["track"]}"/></pattern>')
-    p.append(f'<rect x="{grid_x:.2f}" y="{grid_y}" '
-             f'width="{(len(weeks) - 1) * step + cell:.2f}" '
-             f'height="{6 * step + cell:.2f}" fill="url(#cellBg)"/>')
-    for i, wk in enumerate(weeks):
-        for j, (_, count) in enumerate(wk):
-            if count <= 0:
-                continue
-            k = math.sqrt(min(count / peak, 1.0)) if peak else 0
-            fill = _mix(t["a3"], t["a1"], k) if k < 0.5 else \
-                _mix(t["a1"], t["a2"], (k - 0.5) * 2)
-            p.append(f'<rect x="{grid_x + i * step:.1f}" '
-                     f'y="{grid_y + j * step:.1f}" width="{cell:.1f}" '
-                     f'height="{cell:.1f}" rx="3" fill="{fill}" '
-                     f'opacity="{0.35 + 0.65 * k:.2f}"/>')
-
-    ly = h - 30
-    baseline = ly + cell * 0.72
-    more_w = mono_width("More", 10)
-    p.append(text_el(w - pad, baseline, "More", 10, t["faint"], FONT_MONO,
-                     "400", anchor="end"))
-    lx = (w - pad - more_w - 8) - 4 * step - cell
-    for i in range(5):
-        k = i / 4
-        fill = t["track"] if i == 0 else (
-            _mix(t["a3"], t["a1"], k) if k < 0.5
-            else _mix(t["a1"], t["a2"], (k - 0.5) * 2))
-        p.append(f'<rect x="{lx + i * step:.2f}" y="{ly}" '
-                 f'width="{cell:.2f}" height="{cell:.2f}" rx="3" fill="{fill}" '
-                 f'opacity="{1.0 if i == 0 else 0.35 + 0.65 * k:.2f}"/>')
-    p.append(text_el(lx - 8, baseline, "Less", 10, t["faint"], FONT_MONO,
-                     "400", anchor="end"))
-    p.append("</svg>")
-    return "".join(p)
 
 
 def credentials(t, education, certs, accent="#FF9900"):

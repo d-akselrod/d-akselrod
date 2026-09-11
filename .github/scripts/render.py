@@ -1,24 +1,19 @@
 #!/usr/bin/env python3
 """Render the profile README's SVG cards.
 
-Runs on stdlib only so the workflow needs no dependency install step.
-Set METRICS_TOKEN (a PAT with read:user) to include private contributions;
-otherwise the built-in GITHUB_TOKEN is used and only public activity counts.
+Every card is built from the configuration below, so this needs no network
+access, no credentials and no third-party service. Stdlib only, so the
+workflow needs no dependency install step either.
 """
 
-import json
-import os
 import pathlib
 import sys
-import urllib.error
-import urllib.request
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 import cards  # noqa: E402
 from theme import THEMES  # noqa: E402
 
-LOGIN = os.environ.get("PROFILE_LOGIN", "d-akselrod")
 OUT = pathlib.Path(__file__).resolve().parents[2] / "assets"
 
 NAME = "Daniel Akselrod"
@@ -54,51 +49,6 @@ CERTIFICATIONS = [
     ("AWS Certified AI Practitioner", "Amazon Web Services"),
 ]
 
-QUERY = """
-query($login: String!) {
-  user(login: $login) {
-    contributionsCollection {
-      contributionCalendar {
-        totalContributions
-        weeks { contributionDays { date contributionCount } }
-      }
-    }
-  }
-}
-"""
-
-
-def fetch():
-    token = os.environ.get("METRICS_TOKEN") or os.environ.get("GITHUB_TOKEN")
-    if not token:
-        raise SystemExit("METRICS_TOKEN or GITHUB_TOKEN must be set")
-    body = json.dumps({"query": QUERY, "variables": {"login": LOGIN}}).encode()
-    req = urllib.request.Request(
-        "https://api.github.com/graphql", data=body,
-        headers={"Authorization": f"bearer {token}",
-                 "Content-Type": "application/json",
-                 "User-Agent": f"{LOGIN}-profile-renderer"})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        payload = json.load(resp)
-    user = (payload.get("data") or {}).get("user")
-    if payload.get("errors"):
-        # GraphQL returns partial data alongside errors. Keep whatever came
-        # back so one unavailable field cannot blank every card.
-        print(f"warning: {payload['errors']}", file=sys.stderr)
-    if not user:
-        raise SystemExit(f"no user data returned for {LOGIN}")
-    return user
-
-
-def calendar(user):
-    cal = ((user.get("contributionsCollection") or {})
-           .get("contributionCalendar") or {})
-    weeks = [[(d["date"], d["contributionCount"])
-              for d in w["contributionDays"]]
-             for w in (cal.get("weeks") or [])]
-    return weeks, cal.get("totalContributions", 0)
-
-
 def write(stem, theme_name, svg):
     OUT.mkdir(parents=True, exist_ok=True)
     path = OUT / f"{stem}-{theme_name}.svg"
@@ -110,19 +60,13 @@ def write(stem, theme_name, svg):
 
 
 def main():
-    user = fetch()
-    weeks, total = calendar(user)
-    scope = ("public + private" if os.environ.get("METRICS_TOKEN")
-             else "public activity")
-
     for theme_name, t in THEMES.items():
         write("hero", theme_name, cards.hero(t, NAME, ROLE, META))
         write("stack", theme_name, cards.stack(t, STACK))
         write("credentials", theme_name,
               cards.credentials(t, EDUCATION, CERTIFICATIONS))
-        write("activity", theme_name, cards.activity(t, weeks, total, scope))
 
-    print(f"contributions: {total} ({scope})")
+    print(f"rendered {len(THEMES) * 3} cards into {OUT}")
 
 
 if __name__ == "__main__":
