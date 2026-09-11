@@ -317,3 +317,46 @@ def impact(t, title, subtitle, stats):
                          anchor="middle"))
     p.append("</svg>")
     return "".join(p)
+
+
+def credentials(t, education, certs, accent="#FF9900"):
+    """Two-column education / certification panel.
+
+    `education` and `certs` are lists of (title, subtitle) pairs.
+    """
+    w, pad, h = 1000, 30, 196
+    split = 560
+
+    p = [svg_open(w, h, "Education and certifications"), card(w, h, t)]
+    p.append(text_el(pad, 44, "EDUCATION", 12, t["faint"], FONT_MONO, "600",
+                     spacing="1.2"))
+    p.append(text_el(split + 30, 44, "CERTIFICATIONS", 12, t["faint"],
+                     FONT_MONO, "600", spacing="1.2"))
+    p.append(f'<rect x="{pad}" y="60" width="{w - pad * 2}" height="1" '
+             f'fill="{t["border"]}"/>')
+    p.append(f'<rect x="{split}" y="76" width="1" height="{h - 106}" '
+             f'fill="{t["border"]}"/>')
+
+    for i, (title, subtitle) in enumerate(education[:2]):
+        y = 104 + i * 52
+        p.append(f'<rect x="{pad}" y="{y - 13}" width="3" height="34" rx="1.5" '
+                 f'fill="{t["a1"] if i == 0 else t["a2"]}"/>')
+        p.append(text_el(pad + 16, y, title, 15.5, t["text"], FONT_SANS, "650"))
+        p.append(text_el(pad + 16, y + 19, subtitle, 12, t["muted"], FONT_MONO,
+                         "400"))
+
+    for i, (title, subtitle) in enumerate(certs[:2]):
+        y = 104 + i * 52
+        cx, cy = split + 39, y - 4
+        p.append(f'<circle cx="{cx}" cy="{cy}" r="9" fill="{accent}" '
+                 f'opacity="0.16"/>')
+        p.append(f'<circle cx="{cx}" cy="{cy}" r="4" fill="{accent}">'
+                 f'<animate attributeName="opacity" values="1;0.45;1" '
+                 f'dur="3.4s" begin="{i * 1.1:.1f}s" repeatCount="indefinite"/>'
+                 f'</circle>')
+        p.append(text_el(split + 58, y, title, 15.5, t["text"], FONT_SANS,
+                         "650"))
+        p.append(text_el(split + 58, y + 19, subtitle, 12, t["muted"],
+                         FONT_MONO, "400"))
+    p.append("</svg>")
+    return "".join(p)

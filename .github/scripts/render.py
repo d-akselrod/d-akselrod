@@ -55,6 +55,18 @@ IMPACT_STATS = [
 FALLBACK_COLOURS = ["#3178C6", "#3776AB", "#ED8B00", "#239120", "#7F52FF",
                     "#00ADD8", "#E34F26", "#F7DF1E"]
 
+EDUCATION = [
+    ("M.S. Computer Science",
+     "Georgia Tech  ·  Computing Systems  ·  4.0 GPA  ·  Dec 2026"),
+    ("B.Eng. Software Engineering",
+     "McMaster University  ·  2024"),
+]
+
+CERTIFICATIONS = [
+    ("AWS Certified Cloud Practitioner", "Amazon Web Services"),
+    ("AWS Certified AI Practitioner", "Amazon Web Services"),
+]
+
 QUERY = """
 query($login: String!) {
   user(login: $login) {
@@ -159,6 +171,8 @@ def main():
         write("stack", theme_name, cards.stack(t, STACK))
         write("impact", theme_name, cards.impact(
             t, IMPACT_TITLE, IMPACT_SUBTITLE, IMPACT_STATS))
+        write("credentials", theme_name,
+              cards.credentials(t, EDUCATION, CERTIFICATIONS))
         write("languages", theme_name, cards.languages(t, langs))
         write("activity", theme_name, cards.activity(t, weeks, total, scope))
 

@@ -17,7 +17,7 @@
 </picture>
 
 <!-- kept on one line: GitHub turns single newlines inside an HTML block into <br> -->
-<a href="https://www.linkedin.com/in/daniel-akselrod"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-daniel--akselrod-0A66C2?style=flat-square&logo=linkedin&logoColor=white"></a> <a href="mailto:dakselrod@outlook.com"><img alt="Email" src="https://img.shields.io/badge/Email-dakselrod%40outlook.com-EA4335?style=flat-square&logo=maildotru&logoColor=white"></a> <a href="https://github.com/d-akselrod?tab=repositories"><img alt="Repositories" src="https://img.shields.io/badge/Repos-12-6E5494?style=flat-square&logo=github&logoColor=white"></a>
+<a href="https://www.linkedin.com/in/daniel-akselrod"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-daniel--akselrod-0A66C2?style=flat-square&logo=linkedin&logoColor=white"></a> <a href="mailto:dakselrod@outlook.com"><img alt="Email" src="https://img.shields.io/badge/Email-dakselrod%40outlook.com-EA4335?style=flat-square&logo=maildotru&logoColor=white"></a> <a href="https://www.linkedin.com/in/daniel-akselrod"><img alt="AWS Certified Cloud Practitioner" src="https://img.shields.io/badge/AWS-Cloud%20Practitioner-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white"></a> <a href="https://www.linkedin.com/in/daniel-akselrod"><img alt="AWS Certified AI Practitioner" src="https://img.shields.io/badge/AWS-AI%20Practitioner-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white"></a>
 
 </div>
 
@@ -84,11 +84,13 @@ Most of what I ship lives in private repositories. A sample of what doesn't:
 
 ---
 
-### Education
+### Credentials
 
-**M.S. Computer Science** — Georgia Institute of Technology · Computing Systems · 4.0 GPA · expected Dec 2026 <br>
-**B.Eng. Software Engineering** — McMaster University · 2024 <br>
-**AWS** — Certified Cloud Practitioner · Certified AI Practitioner
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/credentials-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/credentials-light.svg">
+  <img alt="M.S. Computer Science at Georgia Tech and B.Eng. Software Engineering at McMaster; AWS Certified Cloud Practitioner and AI Practitioner" src="assets/credentials-light.svg" width="100%">
+</picture>
 
 <div align="center">
 <br>
