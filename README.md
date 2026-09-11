@@ -1,7 +1,10 @@
 <!--
   This README is generated in part. The SVG cards in assets/ are rendered by
   .github/scripts/render.py and refreshed daily by .github/workflows/profile.yml.
-  Edit copy here; edit card content in .github/scripts/render.py.
+  Edit copy here; edit card content in .github/scripts/render.py. The skills
+  and credentials alt text mirrors STACK / EDUCATION / CERTIFICATIONS there —
+  keep it in sync so the skill names stay searchable and screen-readable,
+  since they are otherwise only pixels inside an SVG.
 
   NOTE: the contribution card already includes private contributions, because
   "include private contributions on my profile" is enabled on the account.
@@ -29,13 +32,13 @@ I build production systems where the AI **is** the product — agentic pipelines
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg">
-  <img alt="Technical skills across languages, agentic AI, machine learning, backend, frontend, cloud and DevOps" src="assets/stack-light.svg" width="100%">
+  <img alt="Technical skills. Languages: TypeScript, JavaScript, Python, Java, Kotlin, C#, SQL, Bash. Agentic AI: RAG, MCP, Claude Agent SDK, OpenAI Agents SDK, LangGraph, LangChain, Amazon Bedrock. Machine Learning: PyTorch, TensorFlow, scikit-learn, NumPy, Pandas, SciPy. Backend & Data: Spring Boot, ASP.NET Core, FastAPI, PostgreSQL, MongoDB. Frontend: React, HTML/CSS, Tailwind, Jest, Electron. Cloud: AWS Lambda, EC2, EKS, S3, Aurora, DynamoDB, Azure App Service, Key Vault, Container Registry. DevOps: Docker, Kubernetes, GitHub Actions, Azure Pipelines, TeamCity, Datadog." src="assets/stack-light.svg" width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/credentials-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/credentials-light.svg">
-  <img alt="M.S. Computer Science at Georgia Tech and B.Eng. Software Engineering at McMaster; AWS Certified Cloud Practitioner and AI Practitioner" src="assets/credentials-light.svg" width="100%">
+  <img alt="Education and certifications. M.S. Computer Science — Georgia Tech  ·  Computing Systems  ·  4.0 GPA  ·  Dec 2026. B.Eng. Software Engineering — McMaster University  ·  2024. AWS Certified Cloud Practitioner — Amazon Web Services. AWS Certified AI Practitioner — Amazon Web Services." src="assets/credentials-light.svg" width="100%">
 </picture>
 
 <picture>
