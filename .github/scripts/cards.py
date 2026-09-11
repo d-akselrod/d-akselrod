@@ -76,21 +76,21 @@ def hero(t, name, role, meta):
     p.append('<ellipse cx="860" cy="238" rx="300" ry="200" fill="url(#orbB)"/>')
     p.append(_graph(t))
 
-    p.append(text_el(56, 72, "$ whoami", 14, t["a1"], FONT_MONO, "500"))
-    cursor_x = 56 + mono_width("$ whoami ", 14)
+    p.append(text_el(30, 72, "$ whoami", 14, t["a1"], FONT_MONO, "500"))
+    cursor_x = 30 + mono_width("$ whoami ", 14)
     p.append(f'<rect x="{cursor_x:.1f}" y="60" width="8" height="15" '
              f'fill="{t["a1"]}" opacity="0.9">'
              f'<animate attributeName="opacity" values="0.9;0.9;0;0" '
              f'dur="1.15s" repeatCount="indefinite"/></rect>')
 
-    p.append(text_el(54, 134, name, 46, "url(#nameGrad)", FONT_SANS, "800",
+    p.append(text_el(28, 134, name, 46, "url(#nameGrad)", FONT_SANS, "800",
                      spacing="-1"))
-    p.append(f'<rect x="56" y="151" width="340" height="3" rx="1.5" '
+    p.append(f'<rect x="30" y="151" width="340" height="3" rx="1.5" '
              f'fill="url(#ruleGrad)">'
              f'<animate attributeName="width" from="0" to="340" dur="1.1s" '
              f'begin="0.25s" fill="freeze"/></rect>')
-    p.append(text_el(56, 186, role, 20, t["text"], FONT_SANS, "600"))
-    p.append(text_el(56, 216, meta, 13.5, t["muted"], FONT_MONO, "400"))
+    p.append(text_el(30, 186, role, 20, t["text"], FONT_SANS, "600"))
+    p.append(text_el(30, 216, meta, 13.5, t["muted"], FONT_MONO, "400"))
     p.append("</g>")
     p.append(card(w, h, t, radius=18, fill="none"))
     p.append("</svg>")
@@ -98,17 +98,22 @@ def hero(t, name, role, meta):
 
 
 def stack(t, groups):
-    """Grouped capability chips. `groups` is a list of (label, [items])."""
-    w = 1000
-    pad_x, label_w, gap, chip_h = 30, 132, 8, 30
+    """Grouped capability chips. `groups` is a list of (label, [items]).
+
+    Shares the header / rule / left-edge geometry of the other cards so the
+    column of content lines up down the page.
+    """
+    w, pad = 1000, 30
+    tick_x, chip_x = 172, 190
+    gap, chip_h = 8, 30
     row_gap, group_gap = 8, 16
     chip_font = 13
-    top = 26
+    top = 80
 
     body, y = [], top
     for label, items in groups:
         rows, cur, cur_w = [], [], 0
-        avail = w - pad_x - label_w - 24 - pad_x
+        avail = w - chip_x - pad
         for item in items:
             cw = mono_width(item, chip_font) + 26
             if cur and cur_w + cw + gap > avail:
@@ -120,14 +125,13 @@ def stack(t, groups):
             rows.append(cur)
 
         block_h = len(rows) * chip_h + (len(rows) - 1) * row_gap
-        body.append(text_el(pad_x + label_w, y + chip_h / 2 + 4.5,
-                            label.upper(), 11, t["faint"], FONT_MONO, "600",
-                            anchor="end", spacing="0.8"))
-        body.append(f'<rect x="{pad_x + label_w + 12}" y="{y + 3}" width="2" '
+        body.append(text_el(pad, y + chip_h / 2 + 4.5, label.upper(), 11,
+                            t["faint"], FONT_MONO, "600", spacing="0.8"))
+        body.append(f'<rect x="{tick_x}" y="{y + 3}" width="2" '
                     f'height="{block_h - 6}" rx="1" fill="{t["border"]}"/>')
         ry = y
         for row in rows:
-            rx = pad_x + label_w + 30
+            rx = chip_x
             for item, cw in row:
                 body.append(
                     f'<rect x="{rx:.1f}" y="{ry}" width="{cw:.1f}" '
@@ -140,9 +144,14 @@ def stack(t, groups):
             ry += chip_h + row_gap
         y += block_h + group_gap
 
-    h = y - group_gap + top
-    out = [svg_open(w, h, "Technical stack"), card(w, h, t), "".join(body),
-           "</svg>"]
+    h = y - group_gap + pad
+    out = [svg_open(w, h, "Technical stack"), card(w, h, t)]
+    out.append(text_el(pad, 44, "TECHNICAL SKILLS", 12, t["faint"], FONT_MONO,
+                       "600", spacing="1.2"))
+    out.append(f'<rect x="{pad}" y="60" width="{w - pad * 2}" height="1" '
+               f'fill="{t["border"]}"/>')
+    out.append("".join(body))
+    out.append("</svg>")
     return "".join(out)
 
 
@@ -165,7 +174,7 @@ def activity(t, weeks, total, scope):
     """`weeks` is a list of week columns, each a list of (date, count)."""
     w, pad = 1000, 30
     gap = 4
-    grid_x, grid_y = pad + 26, 92
+    grid_x, grid_y = pad + 26, 110
     weeks = weeks[-53:]
     # Size the cells to the data so the grid always fills the card width.
     step = (w - pad - grid_x) / max(len(weeks), 53)
@@ -174,12 +183,14 @@ def activity(t, weeks, total, scope):
 
     peak = max((c for wk in weeks for _, c in wk), default=0)
     p = [svg_open(w, h, "Contribution activity"), card(w, h, t)]
-    p.append(text_el(pad, 46, "CONTRIBUTION ACTIVITY", 12, t["faint"],
+    p.append(text_el(pad, 44, "CONTRIBUTION ACTIVITY", 12, t["faint"],
                      FONT_MONO, "600", spacing="1.2"))
-    p.append(text_el(w - pad, 46, scope, 12, t["faint"], FONT_MONO, "400",
+    p.append(text_el(w - pad, 44, scope, 12, t["faint"], FONT_MONO, "400",
                      anchor="end"))
-    p.append(text_el(pad, 70, f"{total:,}", 21, t["text"], FONT_SANS, "700"))
-    p.append(text_el(pad + mono_width(f"{total:,}", 21) * 0.95 + 8, 70,
+    p.append(f'<rect x="{pad}" y="60" width="{w - pad * 2}" height="1" '
+             f'fill="{t["border"]}"/>')
+    p.append(text_el(pad, 90, f"{total:,}", 21, t["text"], FONT_SANS, "700"))
+    p.append(text_el(pad + mono_width(f"{total:,}", 21) * 0.95 + 8, 90,
                      "contributions in the last year", 13, t["muted"],
                      FONT_SANS, "400"))
 
