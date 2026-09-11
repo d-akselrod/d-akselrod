@@ -209,7 +209,11 @@ def activity(t, weeks, total, scope):
         p.append(text_el(pad, grid_y + row * step + cell * 0.72, day, 9.5, t["faint"],
                          FONT_MONO, "400"))
 
-    p.append(f'<pattern id="cellBg" width="{step:.2f}" height="{step:.2f}" '
+    # patternUnits="userSpaceOnUse" tiles from the SVG origin, not from the
+    # rect being filled, so the tile origin has to be pinned to the grid or
+    # the empty cells drift out of step with the drawn ones.
+    p.append(f'<pattern id="cellBg" x="{grid_x:.2f}" y="{grid_y}" '
+             f'width="{step:.2f}" height="{step:.2f}" '
              f'patternUnits="userSpaceOnUse">'
              f'<rect width="{cell:.2f}" height="{cell:.2f}" rx="3" '
              f'fill="{t["track"]}"/></pattern>')
