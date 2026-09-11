@@ -1,71 +1,100 @@
+<!--
+  This README is generated in part. The SVG cards in assets/ are rendered by
+  .github/scripts/render.py and refreshed daily by .github/workflows/profile.yml.
+  Edit copy here; edit card content in .github/scripts/render.py.
+
+  NOTE: the contribution card counts PUBLIC activity only unless a repository
+  secret named METRICS_TOKEN (a PAT with the read:user scope) is set. With it,
+  private contributions are included.
+-->
+
 <div align="center">
 
-# Daniel Akselrod
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
+  <img alt="Daniel Akselrod — Full Stack & AI Software Engineer" src="assets/hero-light.svg" width="100%">
+</picture>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=70A5FD&center=true&vCenter=true&multiline=true&repeat=true&width=500&height=45&lines=Software+Engineer;Building+Innovative+Solutions)](https://git.io/typing-svg)
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Daniel%20Akselrod-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://ca.linkedin.com/in/daniel-akselrod)
+<!-- kept on one line: GitHub turns single newlines inside an HTML block into <br> -->
+<a href="https://www.linkedin.com/in/daniel-akselrod"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-daniel--akselrod-0A66C2?style=flat-square&logo=linkedin&logoColor=white"></a> <a href="mailto:dakselrod@outlook.com"><img alt="Email" src="https://img.shields.io/badge/Email-dakselrod%40outlook.com-EA4335?style=flat-square&logo=maildotru&logoColor=white"></a> <a href="https://github.com/d-akselrod?tab=repositories"><img alt="Repositories" src="https://img.shields.io/badge/Repos-12-6E5494?style=flat-square&logo=github&logoColor=white"></a>
 
 </div>
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="" width="100%">
+I build production systems where the AI **is** the product — agentic pipelines, retrieval that holds up against real documents, and the unglamorous platform work that keeps both running. Right now that means shipping AI features at Guidewire by day and running a 158K-line platform single-handed by night.
 
-### About Me
+---
 
-Software Engineer with a passion for creating innovative solutions that solve real-world problems.
+### Currently
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="" width="100%">
+**Guidewire** — *Software Engineer II* <br>
+AI product work on an AWS / Spring Boot / React stack. Led AI enablement sessions for 100+ engineers across the Toronto office.
 
-### Languages
+**Bristol Cloud** — *Sole engineer* · [cloud.bristolir.com](https://cloud.bristolir.com) <br>
+An internal operating platform spanning 10 business domains — billing, CRM, campaigns, IR screening — that replaced four third-party SaaS tools.
 
-<p>
-  <img alt="C" src="https://img.shields.io/badge/C-0d1117?style=for-the-badge&logo=c&logoColor=A8B9CC" height="28"/>
-  <img alt="C++" src="https://img.shields.io/badge/C++-0d1117?style=for-the-badge&logo=c%2B%2B&logoColor=00599C" height="28"/>
-  <img alt="C#" src="https://img.shields.io/badge/C%23-0d1117?style=for-the-badge&logo=c-sharp&logoColor=239120" height="28"/>
-  <img alt="Python" src="https://img.shields.io/badge/Python-0d1117?style=for-the-badge&logo=python&logoColor=3776AB" height="28"/>
-  <img alt="Go" src="https://img.shields.io/badge/Go-0d1117?style=for-the-badge&logo=go&logoColor=00ADD8" height="28"/>
-  <img alt="Java" src="https://img.shields.io/badge/Java-0d1117?style=for-the-badge&logo=openjdk&logoColor=ED8B00" height="28"/>
-  <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-0d1117?style=for-the-badge&logo=kotlin&logoColor=7F52FF" height="28"/>
-  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-0d1117?style=for-the-badge&logo=javascript&logoColor=F7DF1E" height="28"/>
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-0d1117?style=for-the-badge&logo=typescript&logoColor=3178C6" height="28"/>
-  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-0d1117?style=for-the-badge&logo=html5&logoColor=E34F26" height="28"/>
-  <img alt="CSS3" src="https://img.shields.io/badge/CSS3-0d1117?style=for-the-badge&logo=css3&logoColor=1572B6" height="28"/>
-  <img alt="SQL" src="https://img.shields.io/badge/SQL-0d1117?style=for-the-badge&logo=postgresql&logoColor=4169E1" height="28"/>
-  <img alt="LaTeX" src="https://img.shields.io/badge/LaTeX-0d1117?style=for-the-badge&logo=latex&logoColor=008080" height="28"/>
-  <img alt="MATLAB" src="https://img.shields.io/badge/MATLAB-0d1117?style=for-the-badge&logo=mathworks&logoColor=0076A8" height="28"/>
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/impact-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/impact-light.svg">
+  <img alt="Bristol Cloud: 158K lines of TypeScript, 10 business domains, 1,289 tests green, 3× client revenue growth" src="assets/impact-light.svg" width="100%">
+</picture>
 
-### Technologies
+- Collapsed a 7-service micro-frontend architecture into a modular monolith — retiring 8 Azure App Services, cross-service HTTP hops, shared internal API keys, and Module Federation — without dropping a test.
+- Ships as git-SHA-tagged container images to Azure App Service for single-command rollback, with Key Vault managed-identity secrets and schema-per-domain Postgres isolation across 77 migrations.
+- Exposes platform tools to an in-app AI assistant over an OAuth-secured **MCP server**.
 
-<p>
-  <img alt="Git" src="https://img.shields.io/badge/Git-0d1117?style=for-the-badge&logo=git&logoColor=F05032" height="28"/>
-  <img alt="React" src="https://img.shields.io/badge/React-0d1117?style=for-the-badge&logo=react&logoColor=61DAFB" height="28"/>
-  <img alt="React Native" src="https://img.shields.io/badge/React_Native-0d1117?style=for-the-badge&logo=react&logoColor=61DAFB" height="28"/>
-  <img alt="Express" src="https://img.shields.io/badge/Express-0d1117?style=for-the-badge&logo=express&logoColor=FFFFFF" height="28"/>
-  <img alt="ASP.NET" src="https://img.shields.io/badge/ASP.NET-0d1117?style=for-the-badge&logo=dotnet&logoColor=512BD4" height="28"/>
-  <img alt="XNA" src="https://img.shields.io/badge/XNA-0d1117?style=for-the-badge&logo=xbox&logoColor=107C10" height="28"/>
-  <img alt="Pytest" src="https://img.shields.io/badge/Pytest-0d1117?style=for-the-badge&logo=pytest&logoColor=0A9EDC" height="28"/>
-  <img alt="xUnit" src="https://img.shields.io/badge/xUnit-0d1117?style=for-the-badge&logo=dotnet&logoColor=512BD4" height="28"/>
-  <img alt="Jest" src="https://img.shields.io/badge/Jest-0d1117?style=for-the-badge&logo=jest&logoColor=C21325" height="28"/>
-  <img alt="JUnit" src="https://img.shields.io/badge/JUnit-0d1117?style=for-the-badge&logo=junit5&logoColor=25A162" height="28"/>
-</p>
+---
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="" width="100%">
+### Stack
 
-### Stats
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg">
+  <img alt="Technical stack" src="assets/stack-light.svg" width="100%">
+</picture>
+
+---
+
+### Selected public work
+
+Most of what I ship lives in private repositories. A sample of what doesn't:
+
+| Project | What it is |
+| --- | --- |
+| **[rag-engine](https://github.com/d-akselrod/rag-engine)** | Retrieval-augmented generation API on FastAPI, FAISS, and Gemini — semantic search and grounded chat over a local vector store, no external database required. |
+| **[sweat-smart](https://github.com/d-akselrod/sweat-smart)** | Full-stack mobile fitness app. React front end, ASP.NET Core API, Azure-hosted. |
+| **[cab-pool](https://github.com/d-akselrod/cab-pool)** | Full-stack Android ride-sharing app in TypeScript. |
+| **[python3-pseudo-compiler](https://github.com/d-akselrod/python3-pseudo-compiler)** | Translates Python 3 into PEP/9 assembly by walking the AST. |
+
+---
+
+### Activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg">
+  <img alt="Contribution activity over the last year" src="assets/activity-light.svg" width="100%">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/languages-light.svg">
+  <img alt="Language distribution across public repositories" src="assets/languages-light.svg" width="100%">
+</picture>
+
+---
+
+### Education
+
+**M.S. Computer Science** — Georgia Institute of Technology · Computing Systems · 4.0 GPA · expected Dec 2026 <br>
+**B.Eng. Software Engineering** — McMaster University · 2024 <br>
+**AWS** — Certified Cloud Practitioner · Certified AI Practitioner
 
 <div align="center">
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td>
-<img src="https://github-readme-stats-sigma-five.vercel.app/api?username=d-akselrod&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=70A5FD&icon_color=70A5FD&text_color=C9D1D9" alt="GitHub Stats" />
-</td>
-<td>
-<img src="https://streak-stats.demolab.com/?user=d-akselrod&theme=tokyonight&hide_border=true&background=0D1117&ring=70A5FD&fire=70A5FD&currStreakLabel=70A5FD" alt="GitHub Streak" />
-</td>
-</tr>
-</table>
+<br>
 
-<img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=d-akselrod&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=70A5FD&text_color=C9D1D9&layout=compact&langs_count=10&hide=html,css" alt="Top Languages" width="550"/>
+**Open to conversations about full-stack and agentic AI work.**
+
+<a href="https://www.linkedin.com/in/daniel-akselrod">LinkedIn</a> · <a href="mailto:dakselrod@outlook.com">dakselrod@outlook.com</a>
 
 </div>
